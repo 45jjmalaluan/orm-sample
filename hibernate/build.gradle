@@ -1,0 +1,5 @@
+project.description = 'Hibernate sample'
+
+dependencies {
+    compile project(':model')
+}

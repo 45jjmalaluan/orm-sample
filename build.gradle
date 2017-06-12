@@ -1,0 +1,26 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'groovy'
+
+    sourceCompatibility = 1.8
+
+    ext {
+        // spring
+        springframeworkBootGroup = 'org.springframework.boot'
+        springframeworkBootVersion = '1.5.2.RELEASE'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "$springframeworkBootGroup:spring-boot-starter-data-jpa:$springframeworkBootVersion"
+        compile 'org.postgresql:postgresql:9.4-1206-jdbc41'
+
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+        testCompile "org.springframework:spring-test:4.3.7.RELEASE"
+        testCompile 'org.spockframework:spock-spring:1.0-groovy-2.4'
+    }
+}

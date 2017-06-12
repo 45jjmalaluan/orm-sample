@@ -1,0 +1,8 @@
+rootProject.name = 'orm'
+
+include 'hibernate'
+
+include 'model'
+
+include 'jpa'
+
